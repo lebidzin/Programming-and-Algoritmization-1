@@ -62,3 +62,5 @@ diff hra_sama_voda_001.out hra_sama_voda_001.ref
 ```
 
 ```
+
+DEBUG: Cíl je [-9.993, 0.492]
