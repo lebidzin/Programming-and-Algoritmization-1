@@ -83,7 +83,7 @@ int main(void){
       }
     }else{
       x1 = -c/b;
-      printf("x=%f\n", x1);
+      printf("x=%g\n", x1);
       return 0;
     }
   }
@@ -92,15 +92,15 @@ int main(void){
   // D==0: Jeden dvojnásobný reálný kořen:
   if(fabs(D)<E){
     x1 = -b/(2*a);
-    printf("x=%f\n", x1);
+    printf("x=%g\n", x1);
   // D>0: Dva reálné různé kořeny
   }else if(D>0){
     x1 = (-b+sqrt(D))/(2*a);
     x2 = (-b-sqrt(D))/(2*a);
     if(x1 < x2){
-      printf("x1=%f; x2=%f\n", x1, x2);
+      printf("x1=%g; x2=%g\n", x1, x2);
     }else{
-      printf("x1=%f; x2=%f\n", x2, x1);
+      printf("x1=%g; x2=%g\n", x2, x1);
     }
   // D<0: Rovnice nemá řešení v oboru reálných čísel (kořeny jsou komplexní):
   }else{
@@ -109,7 +109,7 @@ int main(void){
     double Re = -b/(2*a);
     // Imaginarni cast:
     double Im = sqrt(fabs(D))/fabs(2*a);
-    printf("x1=%f+%fi; x2=%f-%fi\n", Re, Im, Re, Im);
+    printf("x1=%g+%gi; x2=%g-%gi\n", Re, Im, Re, Im);
   }
 
   return 0;
