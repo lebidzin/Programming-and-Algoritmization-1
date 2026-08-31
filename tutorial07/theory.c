@@ -1,0 +1,9 @@
+// Teoretické otázky
+
+// Co je to pole?:  Pole(array) se pouzivaji pro ukladani vicera hodnot do jedne promenne, namisto aby deklarovali samostatnou promennou pro kazdou hodnotu. Format vytvareni pole: type name[].
+// Co je specifické pro staticky alokované pole?  :Maji omezenou kapacitu, na tu kterou jsme staticky alokovali
+// Můžeme předávat pole do funkce? Jak?: V C dochází k tzv. array decay – pole se nepředává celé, ale automaticky zdegeneruje na ukazatel na svůj první prvek (type *arr nebo type arr[]). Protože ukazatel neobsahuje informaci o délce, musíš jako další parametr předat i velikost pole (např. size_t size).
+// Co když pole budeme ve funkci upravovat?: V C se pole nikdy nepředává hodnotou (kopií). Jelikož funkce dostane ukazatel na první prvek původního pole, jakákoliv změna prvků uvnitř funkce vždy přímo modifikuje původní pole.
+// Můžeme vracet pole z funkce? Jak?: Syntaxe jazyka C neumožňuje vrátit pole (typ type[] jako návratový typ neexistuje). Lze vrátit pouze ukazatel (type *). Zde je kritické nevracet ukazatel na lokální pole vytvořené na zásobníku (po skončení funkce zanikne). Vrací se buď pole dynamicky alokované (malloc), pole zabalené do struct, nebo se výstupní pole předá funkci jako parametr.
+// Jak pole indexujeme?: Indexuje se od 0 do N - 1 pomocí operátoru []. V C je zápis arr[i] pouze syntaktický cukr pro pointerovou aritmetiku *(arr + i).
+// Co se stane, pokud budeme přistupovat do pole mimo povolené indexy?: Formálně nastává nedefinované chování (Undefined Behavior). Jazyk C nekontroluje meze polí. Program může spadnout na Segmentation fault, ale také může tiše přepsat jiná data v paměti nebo přečíst náhodné hodnoty, aniž by došlo k okamžitému pádu.
