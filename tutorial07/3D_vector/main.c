@@ -25,7 +25,7 @@ int clean_buffer(){
 
 int read_vector(struct vector3D *vector){
   printf("Zadejte vektor ve formate x y z:\n");
-  while(scanf("%lf %lf %lf", &vector->x, &vector->y, &vector->z)!=3){
+  while(scanf("%g %g %g", &vector->x, &vector->y, &vector->z)!=3){
     printf("Neplatny vstup\n");
     vector->x=0;
     vector->y=0;
@@ -40,7 +40,7 @@ int read_vector(struct vector3D *vector){
 }
 
 void print_vector(struct vector3D vector){
-  printf("Vektor ma koordinaty x: %lf, y: %lf, z: %lf\n", vector.x, vector.y, vector.z);
+  printf("Vektor ma koordinaty x: %g, y: %g, z: %g\n", vector.x, vector.y, vector.z);
 }
 
 double calculate_vector_size(struct vector3D vector){
@@ -130,7 +130,7 @@ int main(){
         }
 
         double vector_size = calculate_vector_size(vector1);
-        printf("Velikost vektoru: %lf\n", vector_size);
+        printf("Velikost vektoru: %g\n", vector_size);
 
         break;
       case 'b':
@@ -162,7 +162,7 @@ int main(){
         }
 
         double result_scalar_product = scalar_product(vector1, vector2);
-        printf("Skalarny produkt: %lf\n", result_scalar_product);
+        printf("Skalarny produkt: %g\n", result_scalar_product);
 
         break;
       case 'd':
@@ -174,7 +174,7 @@ int main(){
 
         double constant;
         printf("Zadejte konstantu:\n");
-        while(scanf("%lf", &constant)!=1){
+        while(scanf("%g", &constant)!=1){
           printf("Neplatny vstup\n");
           int clean_buffer_result = clean_buffer();
           if(clean_buffer_result == 2){
@@ -199,9 +199,9 @@ int main(){
 
         int are_equal = are_vectors_equal(vector1, vector2);
         if(are_equal == 1){
-          printf("Vektory s koordinaty <%lf, %lf, %lf>, jsou rovne\n", vector1.x, vector1.y,vector1.z);
+          printf("Vektory s koordinaty <%g, %g, %g>, jsou rovne\n", vector1.x, vector1.y,vector1.z);
         }else{
-          printf("Vektory s koordinaty <%lf, %lf, %lf>\n<%lf, %lf, %lf> NEjsou rovne\n", vector1.x, vector1.y, vector1.z, vector2.x, vector2.y, vector2.z);
+          printf("Vektory s koordinaty <%g, %g, %g>\n<%g, %g, %g> NEjsou rovne\n", vector1.x, vector1.y, vector1.z, vector2.x, vector2.y, vector2.z);
         }
 
         break;
@@ -219,9 +219,9 @@ int main(){
 
         int do_point = do_vectors_point_in_same_direction(vector1, vector2);
         if(do_point == 1){
-          printf("Vektory s koordinaty <%lf, %lf, %lf>\n<%lf, %lf, %lf>\n maji stejny smer\n", vector1.x, vector1.y,vector1.z,vector2.x, vector2.y, vector2.z);
+          printf("Vektory s koordinaty <%g, %g, %g>\n<%g, %g, %g>\n maji stejny smer\n", vector1.x, vector1.y,vector1.z,vector2.x, vector2.y, vector2.z);
         }else{
-          printf("Vektory s koordinaty <%lf, %lf, %lf>\n<%lf, %lf, %lf>\nNEmaji stejny smer\n", vector1.x, vector1.y, vector1.z, vector2.x, vector2.y, vector2.z);
+          printf("Vektory s koordinaty <%g, %g, %g>\n<%g, %g, %g>\nNEmaji stejny smer\n", vector1.x, vector1.y, vector1.z, vector2.x, vector2.y, vector2.z);
         }
 
         break;
@@ -239,9 +239,9 @@ int main(){
 
         int do_have_same_size = do_vectors_have_same_size(vector1, vector2);
         if(do_have_same_size == 1){
-          printf("Vektory s koordinaty <%lf, %lf, %lf>\n<%lf, %lf, %lf>\n maji stejnou velikost\n", vector1.x, vector1.y,vector1.z,vector2.x, vector2.y, vector2.z);
+          printf("Vektory s koordinaty <%g, %g, %g>\n<%g, %g, %g>\n maji stejnou velikost\n", vector1.x, vector1.y,vector1.z,vector2.x, vector2.y, vector2.z);
         }else{
-          printf("Vektory s koordinaty <%lf, %lf, %lf>\n<%lf, %lf, %lf>\n NEmaji stejnou velikost\n", vector1.x, vector1.y, vector1.z, vector2.x, vector2.y, vector2.z);
+          printf("Vektory s koordinaty <%g, %g, %g>\n<%g, %g, %g>\n NEmaji stejnou velikost\n", vector1.x, vector1.y, vector1.z, vector2.x, vector2.y, vector2.z);
         }
 
         break;
