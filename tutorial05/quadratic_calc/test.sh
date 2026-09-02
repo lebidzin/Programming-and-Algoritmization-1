@@ -11,7 +11,7 @@ for in_file in quad/quad_*.in; do
   if [ -f "$ref_file" ]; then
     echo "=== Test $in_file ==="
     # Spuštění diffu a vypsání rozdílu
-    if ./quadratic_calc < "$in_file" | diff -u - "$ref_file"; then
+    if ./main < "$in_file" | diff -u - "$ref_file"; then
       echo "Status: OK"
     else
       echo "Status: FAIL"

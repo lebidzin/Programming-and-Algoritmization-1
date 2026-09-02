@@ -6,7 +6,7 @@
   fi
   for f in *.in; do
     echo "--- Test $f ---"
-    ./3D_vektor < "$f" > "${f%.in}.out"
+    ./main < "$f" > "${f%.in}.out"
     cat "${f%.in}.out"
     echo ""
   done
