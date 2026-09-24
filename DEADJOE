@@ -1,0 +1,18 @@
+
+*** These modified files were found in JOE when it aborted on Thu Sep 24 12:42:58 2026
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+/home/lebidzin/linux-home/.gitconfig
+
+*** File '/home/lebidzin/linux-home/.gitconfig'
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Zinovii Lebid
+	email = lebidzin@fit.cvut.cz
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
